@@ -1,38 +1,108 @@
+:root {
+  --primary-color: #4CAF50; /* Green */
+  --secondary-color: #f44336; /* Red */
+  --background-color: #f0f0f0;
+  --text-color: #333;
+  --completed-color: #d4edda;
+  --border-color: #ccc;
+  --button-hover-color: #45a049;
+  --button-active-color: #3e8e41;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+}
+
 .App {
   text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: var(--primary-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input[type="text"],
+textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-color);
   color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: var(--button-hover-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+  background-color: var(--button-active-color);
+}
+
+.todo-item {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.todo-item.completed {
+  background-color: var(--completed-color);
+  text-decoration: line-through;
+}
+
+.todo-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-details {
+  margin-top: 10px;
+  text-align: left;
+  color: #555;
+}
+
+button svg {
+  vertical-align: middle;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
