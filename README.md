@@ -60,3 +60,4 @@ This is a simple and modern Todo List application built with React. The applicat
    ```sh
    git clone <repository-url>
    cd <repository-folder>
+2. **npm start :**  Run this command in the terminal then the application will be opened in the local system(http://localhost:3000).
