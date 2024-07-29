@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Todo List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This is a simple and modern Todo List application built with React. The application allows users to manage tasks with features such as adding, editing, marking tasks as done, deleting tasks, and searching through tasks. The tasks are displayed in an expandable list format, showing a description and a timestamp of the last update when expanded.
 
-In the project directory, you can run:
+## System Design
 
-### `npm start`
+### Features
+- **Create Task:** Users can add new tasks with a title and description.
+- **Update Task:** Users can edit existing tasks.
+- **Mark as Done:** Users can toggle the completion status of tasks.
+- **Delete Task:** Users can remove tasks from the list.
+- **Search Tasks:** Users can filter tasks based on the search term, with the search term managed through URL parameters.
+- **Expandable List:** Tasks can be expanded to show additional details like description and timestamp.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Technology Stack
+- **Frontend:** React.js
+- **Routing:** `react-router-dom`
+- **Styling:** CSS for a modern and responsive design
+- **State Management:** React state and effects
+- **Data Storage:** Local storage to persist tasks between sessions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Implementation
 
-### `npm test`
+### File Structure
+- **`src/`**: Contains the source code for the application
+  - **`components/`**: Contains React components for the application
+    - `TodoItem.js`: Component to display individual tasks with expandable details
+    - `TodoList.js`: Component to list all tasks with search functionality
+    - `TodoForm.js`: Component to add and edit tasks
+  - **`App.js`**: Main component that includes routing and state management
+  - **`App.css`**: CSS file for styling the application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Key Components
+- **`App.js`:**
+  - Manages global state and routing
+  - Handles adding, editing, marking as done, and deleting tasks
 
-### `npm run build`
+- **`TodoList.js`:**
+  - Displays a list of tasks
+  - Integrates search functionality using URL parameters
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **`TodoItem.js`:**
+  - Displays individual tasks with expandable details
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **`TodoForm.js`:**
+  - Form for adding and editing tasks
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### URL Parameters
+- **Search Functionality:** Uses URL parameters to manage the search term, allowing users to filter tasks and see the current search term in the URL.
 
-### `npm run eject`
+## Setup and Running the Application
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
+- Node.js and npm installed on your machine
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Steps to Set Up
+1. **Clone the Repository:**
+   ```sh
+   git clone <repository-url>
+   cd <repository-folder>
